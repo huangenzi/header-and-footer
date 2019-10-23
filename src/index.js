@@ -1,14 +1,11 @@
 import SlHeader from './packages/header/sl-header'
 import SlFooter from './packages/footer/sl-footer'
 
-const component = [
-    SlHeader,
-    SlFooter
-]
+const components = [SlHeader, SlFooter];
 
-const install = function(Vue, opts = {}) {
-    component.map(component => {
-        Vue.component(component.name, component)
+const install = function(Vue) {
+    components.map(component => {
+      Vue.component(component.name, component);
     })
 }
 
